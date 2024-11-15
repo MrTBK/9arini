@@ -10,7 +10,7 @@ body {
   padding-right: 50px;
   padding-left: 50px;
   padding-bottom: 50px;
-  margin-top: 7vh;
+  margin-top: 5vh;
   text-align: center;
   background: var(--bg-col);
   border-radius: 10px;
@@ -142,4 +142,8 @@ select.input-field {
 option {
   background-color: var(--bg-field);
   color: var(--main-col);
+}
+a {
+  color: #ffeba7;
+  text-decoration: none;
 }
