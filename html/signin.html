@@ -2,13 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="website icon" type="png" href="../images/créer.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
     <link rel="stylesheet" href="../css/signin.css" />
   </head>
   <body>
     <div class="card">
-      <h4 class="title">Sign up</h4>
+      <h4 class="title">Créer un compte</h4>
       <br />
 	<form action="../php/register.php" method="POST">
         <!-- Name Field -->
@@ -24,7 +25,7 @@
           </svg>
           <input
             autocomplete="off"
-            placeholder="Name"
+            placeholder="Nom"
             class="input-field"
             name="name"
             type="text"
@@ -44,7 +45,7 @@
           </svg>
           <input
             autocomplete="off"
-            placeholder="Last Name"
+            placeholder="Prénom"
             class="input-field"
             name="lastname"
             type="text"
@@ -92,7 +93,7 @@
             />
           </svg>
 <select class="input-field select-field" name="section">
-    <option value="" disabled selected>Select Section</option>
+    <option value="" disabled selected>Section</option>
     <option value="math">Mathématiques</option>
     <option value="science">Sciences</option>
     <option value="info">Informatique</option>
@@ -117,7 +118,7 @@
           </svg>
           <input
             autocomplete="off"
-            placeholder="Password"
+            placeholder="Mot de passe"
             class="input-field"
             name="password"
             type="password"
@@ -129,7 +130,7 @@
         <button class="btn" type="submit">Sign Up</button>
       </form>
       <br />
-      <a href="login.html">Login to an existing account</a>
+      <a href="login.html">Avez vous déjà un compte ? Se connecter </a>
     </div>
   </body>
 </html>
