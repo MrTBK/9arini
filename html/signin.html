@@ -10,7 +10,7 @@
     <div class="card">
       <h4 class="title">Sign up</h4>
       <br />
-      <form>
+	<form action="../php/register.php" method="POST">
         <!-- Name Field -->
         <div class="field">
           <svg
@@ -76,31 +76,7 @@
           />
         </div>
 
-        <!-- Class Field -->
-        <div class="field">
-          <svg
-            class="input-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M23 5v13.883l-1 .117v-16c-3.895.119-7.505.762-10.002 2.316-2.496-1.554-6.102-2.197-9.998-2.316v16l-1-.117v-13.883h-1v15h9.057c1.479
-               0 1.641 1 2.941 1 1.304 0 1.461-1 2.942-1h9.06v-15h-1zm-12 13.645c-1.946-.772-4.137-1.269-7-1.484v-12.051c2.352.197 4.996.675 7 
-               1.922v11.613zm9-1.484c-2.863.215-5.054.712-7 1.484v-11.613c2.004-1.247 4.648-1.725 7-1.922v12.051z"
-            />
-          </svg>
-          <select class="input-field select-field" name="class">
-            <option value="" disabled selected>Select Class</option>
-            <option value="1">1ère année secondaire</option>
-            <option value="2">2ème année secondaire</option>
-            <option value="3">3ème année secondaire</option>
-            <option value="4">4ème année secondaire</option>
-          </select>
-        </div>
-
-        <!-- Section Field -->
+                <!-- Section Field -->
         <div class="field">
           <svg
             class="input-icon"
@@ -115,14 +91,16 @@
                 1.922v11.613zm9-1.484c-2.863.215-5.054.712-7 1.484v-11.613c2.004-1.247 4.648-1.725 7-1.922v12.051z"
             />
           </svg>
-          <select class="input-field select-field" name="section">
-            <option value="" disabled selected>Select Section</option>
-            <option value="math">Mathémathiques</option>
-            <option value="science">Sciences</option>
-            <option value="info">Informatique</option>
-            <option value="lettres">Lettre</option>
-            <option value="eco">Economie</option>
-          </select>
+<select class="input-field select-field" name="section">
+    <option value="" disabled selected>Select Section</option>
+    <option value="math">Mathématiques</option>
+    <option value="science">Sciences</option>
+    <option value="info">Informatique</option>
+    <option value="tech">Technique</option>
+    <option value="lettres">Lettres</option>
+    <option value="eco">Économie</option>
+</select>
+
         </div>
 
         <!-- Password Field -->
