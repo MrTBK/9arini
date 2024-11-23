@@ -24,12 +24,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt = $pdo->prepare("SELECT * FROM users WHERE email = ?");
         $stmt->execute([$email]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
-
+    
         if ($user && password_verify($password, $user['password'])) {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['email'] = $user['email'];
             $_SESSION['section'] = $user['section'];
-
+            $_SESSION['role'] = $user['role'];
+    
+            // Check if the user is an admin
+            if ($_SESSION['role'] === 'admin') {
+                echo "<script>alert('Welcome Admin!');</script>";
+            }
             header("Location: ../html/matiere.html");
             exit;
         } else {
@@ -38,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } catch (PDOException $e) {
         die("Error: " . $e->getMessage());
     }
-}
+} 
 
 function alertAndRedirect($message, $url) {
     echo "<script>alert('$message'); window.location.href = '$url';</script>";
