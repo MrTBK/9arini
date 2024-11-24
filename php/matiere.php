@@ -4,7 +4,6 @@ ini_set('display_errors', 1);
 
 session_start();
 
-// Ensure session variables are set
 if (!isset($_SESSION['section']) || !isset($_SESSION['role'])) {
     die(json_encode(['error' => 'Session variables not set']));
 }

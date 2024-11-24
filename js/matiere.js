@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log('JavaScript Loaded');  // Confirm if script is loaded
-
+  console.log('JavaScript Loaded');
   fetch('../php/matiere.php')
       .then(response => {
-          console.log('Received Response:', response);  // Log the response object
+          console.log('Received Response:', response);
 
           if (!response.ok) {
               throw new Error("Failed to fetch subjects data");
@@ -11,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
           return response.json();
       })
       .then(data => {
-          console.log('Fetched Data:', data);  // Log the fetched data
+          console.log('Fetched Data:', data);
 
           const { section, subjects } = data;
           const tilesContainer = document.querySelector('.tiles');
@@ -47,13 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
               phytech: "Physics for Technique ",
               info: "Informatics"
           };
-
-          // Generate subject tiles
           subjects.forEach((subject, index) => {
             const article = document.createElement('article');
-            const styleClass = `style${(index % 6) + 1}`;  // Cycle through style1 to style6
-            console.log(`Index: ${index}, Subject: ${subject}, Assigned Class: ${styleClass}`);  // Debug class assignment
-            
+            const styleClass = `style${(index % 6) + 1}`;
+            console.log(`Index: ${index}, Subject: ${subject}, Assigned Class: ${styleClass}`);
             article.className = styleClass;
               const imageWrapper = document.createElement('span');
               imageWrapper.className = "image";
