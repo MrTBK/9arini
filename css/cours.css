@@ -1,0 +1,413 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+p,
+img,
+footer,
+header,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+footer,
+header,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+body {
+  text-size-adjust: none;
+
+  background-color: transparent;
+  color: inherit;
+}
+@viewport {
+  width: device-width;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  background: #ffffff;
+}
+body {
+  color: #585858;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 16pt;
+  font-weight: 300;
+  line-height: 1.75;
+}
+a {
+  transition: border-bottom-color 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+  color: #585858;
+  border-bottom: dotted 1px rgba(88, 88, 88, 0.5);
+}
+a:hover {
+  border-bottom-color: transparent;
+  color: #00aaff !important;
+}
+p {
+  margin: 0 0 2em 0;
+}
+h1 {
+  font-size: 2.75em;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 1em 0;
+  letter-spacing: -0.035em;
+}
+h1 a {
+  color: inherit;
+}
+h2 {
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0 0 2em 0;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+}
+h2 a {
+  color: inherit;
+}
+h2 {
+  font-size: 1.1em;
+}
+header p {
+  margin-top: -1em;
+}
+.image {
+  border-radius: 4px;
+  border: 0;
+  display: inline-block;
+  position: relative;
+}
+.image img {
+  border-radius: 4px;
+  display: block;
+}
+.image.left,
+.image.right {
+  max-width: 40%;
+}
+.image.left img,
+.image.right img {
+  width: 100%;
+}
+.image.left {
+  float: left;
+  padding: 0 1.5em 1em 0;
+  top: 0.25em;
+}
+.image.right {
+  float: right;
+  padding: 0 0 1em 1.5em;
+  top: 0.25em;
+}
+.image.fit {
+  display: block;
+  margin: 0 0 2em 0;
+  width: 100%;
+}
+.image.fit img {
+  width: 100%;
+}
+.image.main {
+  display: block;
+  margin: 0 0 3em 0;
+  width: 100%;
+}
+.image.main img {
+  width: 100%;
+}
+
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin: -2.5em 0 0 -2.5em;
+}
+.tiles article {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  position: relative;
+  width: calc(33.33333% - 2.5em);
+  margin: 2.5em 0 0 2.5em;
+}
+.tiles article > .image {
+  transition: transform 0.5s ease;
+  position: relative;
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.tiles article > .image img {
+  display: block;
+  width: 100%;
+}
+.tiles article > .image:before {
+  pointer-events: none;
+  transition: background-color 0.5s ease, opacity 0.5s ease;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 1;
+  opacity: 0.8;
+}
+.tiles article > .image:after {
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 0.25px%3B stroke: %23ffffff%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='100' y2='100' /%3E%3Cline x1='100' y1='0' x2='0' y2='100' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.25;
+  z-index: 2;
+}
+.tiles article > a {
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  border-radius: 4px;
+  border-bottom: 0;
+  color: #ffffff;
+  text-decoration: none;
+  z-index: 3;
+}
+.tiles article > a > :last-child {
+  margin: 0;
+}
+.tiles article > a:hover {
+  color: #ffffff !important;
+}
+.tiles article > a h2 {
+  margin: 0;
+}
+.tiles article > a .content {
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  width: 100%;
+  max-height: 0;
+  line-height: 1.5;
+  margin-top: 0.35em;
+  opacity: 0;
+}
+.tiles article > a .content > :last-child {
+  margin-bottom: 0;
+}
+.tiles article.style1 > .image:before {
+  background-color: #f2849e;
+}
+.tiles article.style2 > .image:before {
+  background-color: #7ecaf6;
+}
+.tiles article.style3 > .image:before {
+  background-color: #7bd0c1;
+}
+.tiles article.style6 > .image:before {
+  background-color: #c75b9b;
+}
+.tiles article.style5 > .image:before {
+  background-color: #ae85ca;
+}
+.tiles article.style4 > .image:before {
+  background-color: #8499e7;
+}
+body:not(.is-touch) .tiles article:hover > .image {
+  transform: scale(1.1);
+}
+body:not(.is-touch) .tiles article:hover > .image:before {
+  background-color: #333333;
+  opacity: 0.35;
+}
+body:not(.is-touch) .tiles article:hover > .image:after {
+  opacity: 0;
+}
+body:not(.is-touch) .tiles article:hover .content {
+  max-height: 15em;
+  opacity: 1;
+}
+* + .tiles {
+  margin-top: 2em;
+}
+#header {
+  padding: 2em 0 0.1em 0;
+}
+#header .logo {
+  display: block;
+  border-bottom: 0;
+  color: inherit;
+  font-weight: 900;
+  letter-spacing: 0.35em;
+  margin: 0 0 2.5em 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+}
+#header .logo > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+#header .logo .symbol {
+  margin-right: 0.65em;
+}
+#header .logo .symbol img {
+  display: block;
+  width: 2em;
+  height: 2em;
+}
+#wrapper {
+  transition: opacity 0.45s ease;
+  opacity: 1;
+}
+#main {
+  padding: 0em 0 6em 0;
+}
+#wrapper > * > .inner {
+  width: 100%;
+  max-width: 68em;
+  margin: 0 auto;
+  padding: 0 2.5em;
+}
+.tiles article > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+footer {
+  background-color: #00aaff;
+  height: 5vw;
+  align-content: center;
+  text-align: center;
+}
+h1 {
+  padding-left: 36vw;
+  font-size: 4.5vw;
+}
+.title {
+  padding-top: 13px;
+  font-size: 30px;
+}
+
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.course-box {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.course-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* Popup background overlay */
+.popup {
+  position: fixed;            /* Fixed position relative to the window */
+  top: 0;                     /* Cover the entire window from the top */
+  left: 0;                    /* Cover the entire window from the left */
+  width: 100%;                /* Full width of the screen */
+  height: 100%;               /* Full height of the screen */
+  background: rgba(0, 0, 0, 0.5);  /* Semi-transparent black background */
+  display: none;              /* Initially hidden */
+  justify-content: center;    /* Center the content horizontally */
+  align-items: center;        /* Center the content vertically */
+  z-index: 1000;              /* Make sure the popup is on top */
+}
+
+/* Popup content box */
+.popup-content {
+  background: #fff;            /* White background for the popup content */
+  padding: 20px;                /* Padding around the content */
+  border-radius: 10px;          /* Rounded corners */
+  text-align: center;           /* Center the text */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for the popup box */
+  max-width: 400px;             /* Max width to prevent it from being too wide */
+  width: 100%;                  /* Full width for small screens */
+}
+
+/* Heading inside the popup */
+.popup-content h2 {
+  margin: 0 0 10px;             /* Margin below the heading */
+  font-size: 1.6rem;            /* Size of the heading */
+}
+
+/* Paragraph inside the popup */
+.popup-content p {
+  margin: 10px 0;               /* Space around the paragraph */
+}
+
+/* Button styling inside the popup */
+.popup-content button {
+  margin: 10px 0;               /* Margin around the buttons */
+  padding: 10px 20px;           /* Padding inside the buttons */
+  background-color: #007bff;    /* Blue background color */
+  color: white;                 /* White text color */
+  border: none;                 /* No border */
+  border-radius: 5px;           /* Rounded corners */
+  cursor: pointer;              /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Button hover effect */
+.popup-content button:hover {
+  background-color: #0056b3;    /* Darker blue on hover */
+}
+
+/* Close button for the popup */
+.popup-content button.close {
+  background-color: #f44336;    /* Red background for close button */
+  margin-top: 20px;              /* Space from other buttons */
+}
+
+/* Close button hover effect */
+.popup-content button.close:hover {
+  background-color: #d32f2f;    /* Darker red on hover */
+}
